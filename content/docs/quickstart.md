@@ -5,7 +5,7 @@ description: "A guide to getting up and running with Collapsar"
 icon: "rocket_launch"
 date: "2023-10-15T15:11:11-03:00"
 lastmod: "2023-10-15T15:11:11-03:00"
-draft: true
+draft: false
 toc: true
 ---
 
