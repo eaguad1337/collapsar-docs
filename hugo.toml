@@ -1,6 +1,7 @@
 baseURL = 'https://collapsar.aguad.dev'
 languageCode = 'en-us'
 title = 'Collapsar'
+description = "test"
 
 [params.docs]
 descriptions = true
