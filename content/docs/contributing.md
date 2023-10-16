@@ -1,5 +1,5 @@
 ---
-weight: 2
+weight: 800
 title: "Contributing"
 description: ""
 icon: "article"

@@ -50,20 +50,16 @@ features:
   weight: 20
 
   title: Why use Collapsar?
-  subtitle: Collapsar is a set of tools that will help you to create a highly configurable dashboard for your application in minutes.
+  subtitle: Focus on your code, don't waste time on your dashboard.
 
   items:
-    - title: Fields
+    - title: Forms
       icon: tune
-      description: Collapsar has a built-in field system that allows you to add fields to your dashboard in seconds. Choose between Text, Number, Select, Checkbox, even Relationships or create your own custom field.
+      description: Use built-in field system to create your dashboard in seconds.
 
     - title: Actions
       icon: bolt
-      description: Create custom actions for your models. Actions can be used to perform any task you need, from sending emails to running custom code.
-
-    - title: Batteries included
-      icon: battery_charging_full
-      description: Choose from a range of pre-built components to get your dashboard site up and running quickly.
+      description: Perform any task you need, from sending emails to running custom code.
 
     - title: Made for Masonite
       icon: diversity_1

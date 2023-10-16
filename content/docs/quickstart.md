@@ -1,5 +1,5 @@
 ---
-weight: 1
+weight: 10
 title: "Quickstart"
 description: "A guide to getting up and running with Collapsar"
 icon: "rocket_launch"
