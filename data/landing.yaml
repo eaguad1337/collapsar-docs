@@ -24,7 +24,7 @@ hero:
   #   height: 80px
 
   title: "Collapsar"
-  subtitle: A lightweight, **modern documentation** theme for Hugo. Easily customised for building **fast**, **secure**, and **SEO-friendly** documentation sites.
+  subtitle: Create a **highly configurable** dashboard for your application in minutes. Built for [Masonite Framework](https://docs.masoniteproject.com/).
 
   image:
     path: "images" # path to image under configured assets directory. default 'images'
@@ -53,22 +53,25 @@ features:
   subtitle: Collapsar is a set of tools that will help you to create a highly configurable dashboard for your application in minutes.
 
   items:
-    - title: Fast
-      icon: speed
-      description: 4 x 100's score on Google Lighthouse by default. Lotus Docs removes unused CSS, prefetches asset links, and lazy loads content images.
+    - title: Fields
+      icon: tune
+      description: Collapsar has a built-in field system that allows you to add fields to your dashboard in seconds. Choose between Text, Number, Select, Checkbox, even Relationships or create your own custom field.
 
-    - title: SEO Friendly
-      icon: trending_up
-      description: Data is automatically structured to be SEO friendly. Includes Meta tags, Opengraph, and Twitter cards. Choose the settings that best suit you.
+    - title: Actions
+      icon: bolt
+      description: Create custom actions for your models. Actions can be used to perform any task you need, from sending emails to running custom code.
+
+    - title: Batteries included
+      icon: battery_charging_full
+      description: Choose from a range of pre-built components to get your dashboard site up and running quickly.
+
+    - title: Made for Masonite
+      icon: diversity_1
+      description: We love Masonite Framework and we think you will too. Collapsar is built to work seamlessly with Masonite.
 
     - title: Dark Mode
       icon: dark_mode
-      description: "Prefer not to be blasted by the sun while reading? Switch to a low-light UI with the click of a button. Modify colour variables to match your branding."
-
-    - title: Multilingual Support
-      icon: translate
-      description: Lotus Docs supports Hugo's Multilingual Mode. Create documentation in multiple languages side by side with i18n support.
-
+      description: Prefer not to be blasted by the sun while reading? Switch to a low-light UI with the click of a button.
 
 # Image compare
 image_compare:
