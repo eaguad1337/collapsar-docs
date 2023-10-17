@@ -53,6 +53,39 @@ PROVIDERS = [
 ]
 ```
 
+## Create a resource
+
+Use the following command to create your resources, where `MyModel` is the class name of your [Masonite Model](https://orm.masoniteproject.com/models).
+
+```bash
+python craft resource MyModel
+```
+
+Your new resource will be placed in `app/collapsar/resources/MyModelResource.py` with a base configuration.
+
+```python
+from collapsar import Resource
+from collapsar.IdField import IdField
+
+from app.models.MyModel import MyModel
+
+class MyModelResource(Resource):
+    """MyModel Resource."""
+
+    title = "MyModel"
+    model = MyModel
+
+    @classmethod
+    def fields(cls):
+        """Return the fields of the resource."""
+
+        return [
+            IdField("Id", "id").readonly().sortable(),
+        ]
+```
+
+Great! From now on, you can add [Fields](/docs/fields), [Validations](/docs/validation) or define your Field [Visibility](/docs/visibility)
+
 ## Create a user
 
 {{<alert context="danger" text="Not ready at the moment."/>}}
