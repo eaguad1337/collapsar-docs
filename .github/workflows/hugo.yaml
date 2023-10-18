@@ -33,6 +33,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.118.2
+      HUGO_PARAMS_DOCSEARCH_INDEXNAME: ${{ secrets.HUGO_PARAMS_DOCSEARCH_INDEXNAME }}
+      HUGO_PARAMS_DOCSEARCH_APIKEY: ${{ secrets.HUGO_PARAMS_DOCSEARCH_APIKEY }}
+      HUGO_PARAMS_DOCSEARCH_APPID: ${{ secrets.HUGO_PARAMS_DOCSEARCH_APPID }}
     steps:
       - name: Install Hugo CLI
         run: |
@@ -55,9 +58,6 @@ jobs:
           # For maximum backward compatibility with Hugo modules
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-          HUGO_PARAMS_DOCSEARCH_INDEXNAME: ${{ secrets.HUGO_PARAMS_DOCSEARCH_INDEXNAME }}
-          HUGO_PARAMS_DOCSEARCH_APIKEY: ${{ secrets.HUGO_PARAMS_DOCSEARCH_APIKEY }}
-          HUGO_PARAMS_DOCSEARCH_APPID: ${{ secrets.HUGO_PARAMS_DOCSEARCH_APPID }}
         run: |
           HUGO_PARAMS_DOCSEARCH_INDEXNAME=${HUGO_PARAMS_DOCSEARCH_INDEXNAME} \
           HUGO_PARAMS_DOCSEARCH_APIKEY=${HUGO_PARAMS_DOCSEARCH_APIKEY} \
