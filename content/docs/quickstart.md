@@ -11,7 +11,7 @@ toc: true
 
 Collapsar is a package that will let you save time creating a dashboard for your app. You won't need to worry anymore about creating CRUD's.
 
-{{<alert context="warning" text="Collapsar is in early development stage and it's nnot ready for production environments."/>}}
+{{<alert context="warning" text="Collapsar is in early development stage and it isn't ready for production environments."/>}}
 
 **Main features**
 
@@ -35,8 +35,6 @@ Go to your project folder and run the following [pip](https://pip.pypa.io/en/sta
 pip install collapsar
 ```
 
-{{<alert context="info" text="Make sure to init your **venv** first"/>}}
-
 Add CollapsarProvider to your project in `config/providers.py`:
 
 ```python
@@ -58,6 +56,20 @@ PROVIDERS = [
 ```bash
 python craft collapsar:install
 ```
+
+## Exempt the routes
+
+It's required to exempt Collapsar routes to manage resources. Edit `VerifyCsrfToken.py` and add Collapsar route prefix.
+
+```python
+from masonite.middleware import VerifyCsrfToken as Middleware
+
+
+class VerifyCsrfToken(Middleware):
+    exempt = ["/api/*", "/collapsar/*"]
+```
+
+
 
 ## Create a resource
 
