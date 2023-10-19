@@ -92,11 +92,4 @@ class MyModelResource(Resource):
 
 Great! From now on, you can add [Fields](/docs/fields), [Validations](/docs/validation) or define your Field [Visibility](/docs/visibility)
 
-## Create a user
-
-{{<alert context="danger" text="Not ready at the moment."/>}}
-
-
-## Usage
-
-This package has the UserResource class as example, you could edit the configuration editing the file `/tests/integrations/app/collapsar/resources/UserResource.py`
+To see your dashboard, visit [https://localhost:8000/collapsar](https://localhost:8000/collapsar)
