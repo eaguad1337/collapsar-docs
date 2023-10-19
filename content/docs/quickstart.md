@@ -32,7 +32,7 @@ Before we start, make sure you have the following installed:
 Go to your project folder and run the following [pip](https://pip.pypa.io/en/stable/installation/) command.
 
 ```bash
-pip install masonite-collapsar
+pip install collapsar
 ```
 
 {{<alert context="info" text="Make sure to init your **venv** first"/>}}
@@ -51,6 +51,12 @@ PROVIDERS = [
     CollapsarProvider,
     # ...
 ]
+```
+
+## Publish the assets
+
+```bash
+python craft collapsar:install
 ```
 
 ## Create a resource

@@ -19,7 +19,7 @@ Have questions or want to talk? Be sure to join the [Masonite Discord Community]
 To test the project locally, you just need to clone the repository and configure a basic .env just like any masonite project.
 
 ```bash
-git clone https://github.com/eaguad1337/masonite-collapsar
+git clone https://github.com/usecollapsar/collapsar
 ```
 
 ## Install dependencies
