@@ -65,7 +65,7 @@ jobs:
           HUGO_PARAMS_DOCSEARCH_INDEXNAME=$HUGO_PARAMS_DOCSEARCH_INDEXNAME \
           HUGO_PARAMS_DOCSEARCH_APIKEY=$HUGO_PARAMS_DOCSEARCH_APIKEY \
           HUGO_PARAMS_DOCSEARCH_APPID=$HUGO_PARAMS_DOCSEARCH_APPID \
-          HUGO_PARAMS_googleAnalytics=$HUGO_PARAMS_googleAnalytics \
+          HUGO_googleAnalytics=$HUGO_PARAMS_googleAnalytics \
           hugo \
             --gc \
             --minify \
