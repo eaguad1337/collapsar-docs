@@ -31,7 +31,7 @@ jobs:
   # Build job
   build:
     environment:
-    name: github-pages
+      name: github-pages
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.118.2
