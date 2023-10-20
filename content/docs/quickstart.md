@@ -11,7 +11,7 @@ toc: true
 
 Collapsar is a package that will let you save time creating a dashboard for your app. You won't need to worry anymore about creating CRUD's.
 
-{{<alert context="warning" text="Collapsar is in early development stage and it isn't ready for production environments."/>}}
+{{<alert context="danger" text="Collapsar is in early development stage and it isn't ready for production environments."/>}}
 
 **Main features**
 
@@ -51,12 +51,6 @@ PROVIDERS = [
 ]
 ```
 
-## Publish the assets
-
-```bash
-python craft collapsar:install
-```
-
 ## Exempt the routes
 
 It's required to exempt Collapsar routes to manage resources. Edit `VerifyCsrfToken.py` and add Collapsar route prefix.
@@ -68,8 +62,6 @@ from masonite.middleware import VerifyCsrfToken as Middleware
 class VerifyCsrfToken(Middleware):
     exempt = ["/api/*", "/collapsar/*"]
 ```
-
-
 
 ## Create a resource
 

@@ -1,5 +1,5 @@
 ---
-weight: 20
+weight: 100
 title: "Visibility"
 description: ""
 icon: "article"
@@ -17,7 +17,7 @@ By default, a `Field` will be added to index, show, create and update views.
 Use this method to hide the field from `index` view.
 
 ```python
-PasswordField("Password", "password").hide_from_index(),
+Password("Password", "password").hide_from_index(),
 ```
 
 ### hide_from_show()
@@ -25,7 +25,7 @@ PasswordField("Password", "password").hide_from_index(),
 Use this method to hide the field from `show` view.
 
 ```python
-PasswordField("Password", "password").hide_from_show(),
+Password("Password", "password").hide_from_show(),
 ```
 
 ### hide_from_create()

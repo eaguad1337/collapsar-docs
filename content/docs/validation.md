@@ -32,5 +32,5 @@ Password("Password").create_rules("required", "min:8", "max:40")
 To set rules that will appear on `update`, use the `update_rules` method.
 
 ```python
-PasswordField("Password", "password").update_rules("nullable", "min:8", "max:40")
+Password("Password", "password").update_rules("nullable", "min:8", "max:40")
 ```

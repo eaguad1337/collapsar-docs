@@ -1,7 +1,7 @@
 baseURL = 'https://collapsar.aguad.dev'
 languageCode = 'en-us'
 title = 'Collapsar'
-description = "test"
+description = "Collapsar is a tool that allows you to easily create admin panels in Masonite Framework."
 
 [params.docs]
 descriptions = true
@@ -12,6 +12,14 @@ sidebarIcons = true
 titleIcon = true
 prism = true
 prismTheme = "twilight"
+repoURL = "https://github.com/usecollapsar/collapsar-docs"
+repoBranch = "main"
+editPage = true
+lastMod         = true
+lastModRelative = true
+
+[params.social]
+github = "usecollapsar/collapsar"
 
 [module]
     [[module.imports]]
