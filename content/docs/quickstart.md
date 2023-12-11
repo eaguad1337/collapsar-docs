@@ -37,7 +37,7 @@ pip install collapsar
 
 Add CollapsarProvider to your project in `config/providers.py`:
 
-```python
+{{< prism lang="python" line-numbers="true" >}}
 # config/providers.py
 # ...
 from collapsar import CollapsarProvider
@@ -49,19 +49,49 @@ PROVIDERS = [
     CollapsarProvider,
     # ...
 ]
-```
+{{</ prism >}}
 
-## Exempt the routes
+## Install Inertia
 
-It's required to exempt Collapsar routes to manage resources. Edit `VerifyCsrfToken.py` and add Collapsar route prefix.
+Collapsar depends on `inertia-masonite` package. If you have it installed, skip this step.
+
+To install the Inertia adapter follow the instructions [provided here.](https://github.com/eaguad1337/masonite-inertia)
+
+## Creating a user
+
+To enter your dashboard, you should visit `/collapsar` and a login page will prompt. Create an user to login or use an existing one. Collapsar uses the model "User" to authenticate you.
+
+If you need to create an user:
 
 ```python
-from masonite.middleware import VerifyCsrfToken as Middleware
-
-
-class VerifyCsrfToken(Middleware):
-    exempt = ["/api/*", "/collapsar/*"]
+python craft collapsar:user
 ```
+
+## Configure the gate
+
+You may give access to certain kind of users to your app. To do so, you can specify what is the Authentication model and also define a callback to determine if the user that will be authenticated can have access to your dashboard.
+
+Edit your `config/collapsar.py` file in order to modify USER_MODEL or GATE function.
+
+Pzzt: the RESOURCES variable will indicate which Resources will be available on your sidebar. It receives a list of Resources.
+
+{{< prism lang="python" line-numbers="true" >}}
+"""Collapsar Settings"""
+from app.models.User import User
+
+ROUTE_PREFIX = "collapsar"
+
+RESOURCES = [
+    # Add your resources
+]
+
+USER_MODEL = User
+
+def gate(user):
+     return user.email in []
+
+GATE = gate
+{{</ prism >}}
 
 ## Create a resource
 
@@ -73,7 +103,7 @@ python craft resource MyModel
 
 Your new resource will be placed in `app/collapsar/resources/MyModelResource.py` with a base configuration.
 
-```python
+{{< prism lang="python" line-numbers="true" >}}
 from collapsar import Resource
 from collapsar.IdField import IdField
 
@@ -92,8 +122,29 @@ class MyModelResource(Resource):
         return [
             IdField("Id", "id").readonly().sortable(),
         ]
-```
+{{</ prism >}}
+
+After you created your model, add it to your sidebar:
+
+{{< prism lang="python" line="3,8" line-numbers="true" >}}
+"""Collapsar Settings"""
+from app.models.User import User
+from app.collapsar.MyModelResource import MyModelResource # import the class
+
+ROUTE_PREFIX = "collapsar"
+
+RESOURCES = [
+    MyModelResource, # Add the class here
+]
+
+USER_MODEL = User
+
+def gate(user):
+     return user.email in []
+
+GATE = gate
+{{</ prism >}}
 
 Great! From now on, you can add [Fields](/docs/fields), [Validations](/docs/validation) or define your Field [Visibility](/docs/visibility)
 
-To see your dashboard, visit [https://localhost:8000/collapsar](https://localhost:8000/collapsar)
+To see your dashboard just run your Masonite Server with `python craft serve` and visit [https://localhost:8000/collapsar](https://localhost:8000/collapsar)
